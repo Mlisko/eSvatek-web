@@ -1,0 +1,154 @@
+<html>
+<style>
+    body {
+        background-color: #200000;
+        font-family: Arial, sans-serif;
+        color: white;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        text-align: center;
+    }
+
+    h2,
+    h3 {
+        font-weight: bold;
+    }
+
+    .tlacitko {
+        background-color: #B33;
+        transition: background-color 0.7s ease;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .tlacitko:hover {
+        background-color: #911;
+    }
+
+    #tlacitka a {
+        text-decoration: none;
+        color: white;
+    }
+
+    #tlacitka {
+        text-align: center;
+    }
+
+    .nastaveni {
+        counter-reset: item;
+        list-style-type: none;
+    }
+
+    .nastaveni li {
+        text-align: center;
+    }
+
+    .nastaveni li:before {
+        content: counter(item)") ";
+        counter-increment: item;
+    }
+
+    #nastaveniveci {
+        color: #F55;
+        margin: 0;
+    }
+
+    .oddeleniPrikazu {
+        margin: 10px
+    }
+
+    .prikazy {
+        background-color: #B33;
+        transition: background-color 0.7s ease;
+        padding: 5px;
+        border-radius: 5px;
+        line-height: 28px;
+        margin-right: 5px;
+    }
+
+    .prikazy:hover {
+        background-color: #911;
+    }
+
+    .prikazyTabulka {
+        border-collapse: collapse;
+        margin: 0 auto;
+    }
+
+    .pravo {
+        text-align: right;
+    }
+</style>
+
+<body>
+    <h1 id="nadpis">💐 eSvatek 🥳</h1>
+    <h5 id="podnadpis">Český bot, který každý den o půlnoci napíše svátky v ČR a SK</h4>
+        <div id="tlacitka">
+            <a href="https://discord.com/invite/52hnjet"><span class="tlacitko">Support Server</span></a>
+            <a
+                href="https://discord.com/oauth2/authorize?client_id=802294219720359948&permissions=412585806929&scope=bot%20applications.commands"><span
+                    class="tlacitko">Invite</span></a>
+        </div>
+        <h2>⚙️ Věci k nastavení</h2>
+        <h5 id="nastaveniveci">Na úpravu potřebujete mít oprávnění "Administrator", poté stačí mít ModRoli</h5>
+        <ol class="nastaveni">
+            <li><strong>Kanál</strong>, do kterého se mají o půlnoci posílat svátky</li>
+            <li><strong>ModRole</strong>, která dovoluje uživateli který ji má upravovat nastavení</li>
+        </ol>
+
+        <h2>📜Příkazy eSvatek bota</h2>
+        <h3 class="oddeleniPrikazu">👥 Příkazy pro uživatele</h3>
+
+        <table class="prikazyTabulka">
+            <tr>
+                <td class="pravo"><code class="prikazy">/help</code></td>
+                <td>Seznam příkazů, které bot má</td>
+            </tr>
+            <tr>
+                <td class="pravo"><code class="prikazy">/config</code></td>
+                <td>Vypíše nastavení bota na serveru</td>
+            </tr>
+            <tr>
+                <td class="pravo"><code class="prikazy">/bot</code></td>
+                <td>Napíše informace o botovi</td>
+            </tr>
+            <tr>
+                <td class="pravo"><code class="prikazy">/svatek</code></td>
+                <td>Napíše dnešní svátek svátek</td>
+            </tr>
+            <tr>
+                <td class="pravo"><code class="prikazy">/ping</code></td>
+                <td>Napíše aktuální ping bota</td>
+            </tr>
+            <tr>
+                <td class="pravo"><code class="prikazy">/vote</code></td>
+                <td>Napíše odkaz pro hlasování pro bota</td>
+            </tr>
+        </table>
+
+        <h3 class="oddeleniPrikazu">🛂 Příkazy pro ModRoli</h3>
+        <table class="prikazyTabulka">
+            <tr>
+                <td class="pravo"><code class="prikazy">/modrole</code></td>
+                <td>Nastaví ModRoli pro server</td>
+            </tr>
+            <tr>
+                <td class="pravo"><code class="prikazy">/channel</code></td>
+                <td>Nastaví kanál pro odesílání svátků</td>
+            </tr>
+            <tr>
+                <td class="pravo"><code class="prikazy">/sendSvatek</code></td>
+                <td>Pošle svátek do SvatekChannelu</td>
+            </tr>
+        </table>
+
+        <h5>Při nějakém problému mi můžete napsat do DMs na Discord <span class="zvyrazneni">Mlisko</span>, nebo do roomky na support server!</h5>
+
+</body>
+
+</html>
