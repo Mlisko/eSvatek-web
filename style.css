@@ -43,6 +43,7 @@ h2, h3 {
 }
 
 .nastaveni {
+    margin-top: 10px;
     counter-reset: item;
     list-style-type: none;
 }
