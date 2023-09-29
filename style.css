@@ -5,6 +5,16 @@ body {
     margin: 75px 0;
 }
 
+::-moz-selection {
+    color: white;
+    background: #F00;
+}
+  
+::selection {
+    color: white;
+    background: #F00;
+}
+
 h1, h2, h3, h4, h5 {
     text-align: center;
 }
