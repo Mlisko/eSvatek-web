@@ -1,104 +1,92 @@
 body {
-    background-color: #200000;
-    font-family: Arial, sans-serif;
+    background-color: #250000;
+    font-family: 'AR One Sans', sans-serif;
     color: white;
-    margin: 75px 0;
+    margin: 25px 0;
+    text-align: center;
 }
 
 ::-moz-selection {
     color: white;
     background: #F00;
 }
-  
+
 ::selection {
     color: white;
     background: #F00;
 }
 
-h1, h2, h3, h4, h5 {
-    text-align: center;
-}
-
-h2, h3 {
-    font-weight: bold;
-}
-
 #nadpis {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 #podnadpis {
     margin-top: 0px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    color: #DDD;
+}
+
+#tlacitka {
+    margin: 20px 0;
+}
+
+#tlacitka a {
+    color: white;
+    text-decoration: none;
 }
 
 .tlacitko {
-    background-color: #B33;
+    background-color: #A22;
     transition: background-color 0.6s ease;
     padding: 10px;
     border-radius: 5px;
 }
 
 .tlacitko:hover {
-    background-color: #911;
+    background-color: #800;
+    box-shadow: 0 5px 15px #800;
+    transition: box-shadow, background-color 0.5s ease;
 }
 
-#tlacitka a {
-    text-decoration: none;
-    color: white;
+.zvyrazneni {
+    color: #F99;
 }
 
-#tlacitka {
-    text-align: center;
+#prikazyNadpis {
+    margin: 10px 0;
 }
 
-.nastaveni {
-    margin-top: 10px;
-    counter-reset: item;
-    list-style-type: none;
+.prikaz {
+    background-color: #A22;
+    width: 50%;
+    height: 45px;
+    max-width: 400px;
+    min-width: 320px;
+    margin: 12px auto;
+    padding: 17px;
+    border-radius: 15px;
+    transition: background-color 0.5s ease;
+    text-align: left;
 }
 
-.nastaveni li {
-    line-height: 25px;;
-    text-align: center;
+.prikaz:hover {
+    background-color: #800;
+    box-shadow: 0 5px 15px #800;
+    transition: box-shadow, background-color 0.5s ease;
 }
 
-.nastaveni li:before {
-    content: counter(item)") ";
-    counter-increment: item;
+.prikaz h2,
+h3 {
+    font-size: 16px;
 }
 
-#veciNastaveni {
-    margin-bottom: 10px;
-}
-
-#nastaveniveci {
-    color: #F55;
+.prikaz h3 {
+    text-align: left;
     margin: 0;
 }
 
-.oddeleniPrikazu {
-    margin: 10px
-}
-
-.prikazy {
-    background-color: #B33;
-    transition: background-color 0.6s ease;
-    padding: 5px;
-    border-radius: 5px;
-    line-height: 28px;
-    margin-right: 5px;
-}
-
-.prikazy:hover {
-    background-color: #911;
-}
-
-.prikazyTabulka {
-    border-collapse: collapse;
-    margin: 0 auto;
-}
-
-.pravo {
-    text-align: right;
+.prikaz img {
+    height: 45px;
+    float: left;
+    margin-right: 15px;
 }

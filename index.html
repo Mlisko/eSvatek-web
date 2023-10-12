@@ -1,70 +1,85 @@
 <html>
 <link rel="stylesheet" href="style.css">
+<link rel="icon" href="esvatekNB.png">
+<title>eSvatek</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=AR+One+Sans&display=swap" rel="stylesheet">
 
 <body>
     <h1 id="nadpis">💐 eSvatek 🥳</h1>
-    <h5 id="podnadpis">Český bot, který každý den o půlnoci napíše svátky v ČR a SK</h4>
-        <div id="tlacitka">
-            <a href="https://discord.com/invite/52hnjet" target="_blank" rel="noopener noreferrer"><span class="tlacitko">Support Server</span></a>
-            <a
-                href="https://discord.com/oauth2/authorize?client_id=802294219720359948&permissions=412585806929&scope=bot%20applications.commands" target="_blank" rel="noopener noreferrer"><span
-                    class="tlacitko">Invite</span></a>
+    <h5 id="podnadpis">Bot odesílající každý den o půlnoci svátky v ČR a SK</h5>
+    <div id="tlacitka">
+        <a href="https://discord.com/invite/52hnjet" target="_blank" rel="noopener noreferrer"><span
+                class="tlacitko">Support Server</span></a>
+        <a href="https://discord.com/oauth2/authorize?client_id=802294219720359948&permissions=412585806929&scope=bot%20applications.commands"
+            target="_blank" rel="noopener noreferrer"><span class="tlacitko">Pozvat bota</span></a>
+    </div>
+
+    <p>
+        Pro správné využití bota je potřeba nastavit kanál pro odesílání svátků
+        <br>
+            V případě problému mi můžete napsat do zpráv na Discord <span class="zvyrazneni">Mlisko</span>, nebo do
+            <span class="zvyrazneni">roomky na support server</span>!
+    </p>
+
+    <h1 id="prikazyNadpis">📜Příkazy eSvatek bota</h1>
+    <h2>👥 Příkazy pro uživatele</h2>
+
+    <div class="prikaz">
+
+
+        <div class="prikazText">
+            <img src="./prikazy_obrazky/help.png">
+            <h3>/help</h3>
+            Seznam příkazů, které bot má
         </div>
-        <h2 id="veciNastaveni">⚙️ Věci k nastavení</h2>
-        <h5 id="nastaveniveci">Na úpravu potřebujete mít oprávnění "Administrator", poté stačí mít ModRoli</h5>
-        <ol class="nastaveni">
-            <li><strong>Kanál</strong>, do kterého se mají o půlnoci posílat svátky</li>
-            <li><strong>ModRole</strong>, která dovoluje uživateli který ji má upravovat nastavení</li>
-        </ol>
 
-        <h2>📜Příkazy eSvatek bota</h2>
-        <h3 class="oddeleniPrikazu">👥 Příkazy pro uživatele</h3>
+    </div>
+    <div class="prikaz">
+        <img src="./prikazy_obrazky/config.png">
+        <h3>/config</h3>
+        Vypíše nastavení bota na serveru
+    </div>
+    <div class="prikaz">
+        <img src="./prikazy_obrazky/bot.png">
+        <h3>/bot</h3>
+        Napíše informace o botovi
+    </div>
+    <div class="prikaz">
+        <img src="./prikazy_obrazky/svatek.png">
+        <h3>/svatek</h3>
+        Napíše dnešní svátek
+    </div>
+    <div class="prikaz">
+        <img src="./prikazy_obrazky/ping.png">
+        <h3>/ping</h3>
+        Napíše aktuální ping bota
+    </div>
+    <div class="prikaz">
+        <img src="./prikazy_obrazky/vote.png">
+        <h3>/vote</h3>
+        Napíše odkaz pro hlasování
+    </div>
 
-        <table class="prikazyTabulka">
-            <tr>
-                <td class="pravo"><code class="prikazy">/help</code></td>
-                <td>Seznam příkazů, které bot má</td>
-            </tr>
-            <tr>
-                <td class="pravo"><code class="prikazy">/config</code></td>
-                <td>Vypíše nastavení bota na serveru</td>
-            </tr>
-            <tr>
-                <td class="pravo"><code class="prikazy">/bot</code></td>
-                <td>Napíše informace o botovi</td>
-            </tr>
-            <tr>
-                <td class="pravo"><code class="prikazy">/svatek</code></td>
-                <td>Napíše dnešní svátek</td>
-            </tr>
-            <tr>
-                <td class="pravo"><code class="prikazy">/ping</code></td>
-                <td>Napíše aktuální ping bota</td>
-            </tr>
-            <tr>
-                <td class="pravo"><code class="prikazy">/vote</code></td>
-                <td>Napíše odkaz pro hlasování pro bota</td>
-            </tr>
-        </table>
+    <h2>🛂 Příkazy pro ModRoli a Administrátora</h2>
 
-        <h3 class="oddeleniPrikazu">🛂 Příkazy pro ModRoli</h3>
-        <table class="prikazyTabulka">
-            <tr>
-                <td class="pravo"><code class="prikazy">/modrole</code></td>
-                <td>Nastaví ModRoli pro server</td>
-            </tr>
-            <tr>
-                <td class="pravo"><code class="prikazy">/channel</code></td>
-                <td>Nastaví kanál pro odesílání svátků</td>
-            </tr>
-            <tr>
-                <td class="pravo"><code class="prikazy">/sendSvatek</code></td>
-                <td>Pošle svátek do SvatekChannelu</td>
-            </tr>
-        </table>
-
-        <h5>Při nějakém problému mi můžete napsat do DMs na Discord <span class="zvyrazneni">Mlisko</span>, nebo do roomky na support server!</h5>
-
+    <div class="prikaz">
+        <img src="./prikazy_obrazky/modrole.png">
+        <h3>/modrole</h3>
+        Nastaví ModRoli pro server
+    </div>
+    <div class="prikaz">
+        <img src="./prikazy_obrazky/channel.png">
+        <h3>/channel</h3>
+        Nastaví kanál pro odesílání svátků
+    </div>
+    <div class="prikaz">
+        <img src="./prikazy_obrazky/sendSvatek.png">
+        <h3>/sendsvatek</h3>
+        Pošle svátek do SvatekChannelu
+    </div>
 </body>
 
 </html>
