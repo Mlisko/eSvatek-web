@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eSvatek</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="eSvatek.svg">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="eSvatek.svg" alt="eSvatek Logo">
+            <h1>eSvatek</h1>
+        </div>
+        <button id="theme-toggle" aria-label="Přepnout režim">🌙</button>
+    </header>
+
+
+    <main>
+        <section class="hero">
+            <h2>Discord bot, který ti připomene svátky</h2>
+            <p>Automatické odesílání, jednoduchá konfigurace a moderní design.</p>
+            <a href="https://discord.com/oauth2/authorize?client_id=802294219720359948&permissions=412585806929&scope=bot%20applications.commands"
+                class="btn">📩 Přidat eSvatek na server</a>
+        </section>
+
+
+        <section id="prikazy" class="commands">
+            <h2>Uživatelské příkazy</h2>
+            <div class="command-grid">
+                <div class="command-card">
+                    <img src="prikazy_obrazky/bot.webp" alt="/bot">
+                    <h3>/bot</h3>
+                    <p>Informace o botovi (invite, support, verze...).</p>
+                </div>
+                <div class="command-card">
+                    <img src="prikazy_obrazky/config.webp" alt="/config">
+                    <h3>/config</h3>
+                    <p>Nastavení bota na serveru.</p>
+                </div>
+                <div class="command-card">
+                    <img src="prikazy_obrazky/donate.webp" alt="/donate">
+                    <h3>/donate</h3>
+                    <p>Napíše informace o podpoření běhu eSvatek bota.</p>
+                </div>
+                <div class="command-card">
+                    <img src="prikazy_obrazky/help.webp" alt="/help">
+                    <h3>/help</h3>
+                    <p>Zobrazí seznam příkazů, které bot má.</p>
+                </div>
+                <div class="command-card">
+                    <img src="prikazy_obrazky/ping.webp" alt="/ping">
+                    <h3>/ping</h3>
+                    <p>Napíše aktuální ping bota.</p>
+                </div>
+                <div class="command-card">
+                    <img src="prikazy_obrazky/svatek.webp" alt="/svatek">
+                    <h3>/svatek</h3>
+                    <p>Zjistí svátek k dnešnímu dni, nebo k zadanému datu.</p>
+                </div>
+                <div class="command-card">
+                    <img src="prikazy_obrazky/vote.webp" alt="/vote">
+                    <h3>/vote</h3>
+                    <p>Podpoř bota hlasováním na Top.gg.</p>
+                </div>
+            </div>
+
+
+            <h2>Moderátorské příkazy</h2>
+            <div class="command-grid">
+                <div class="command-card">
+                    <img src="prikazy_obrazky/channel.webp" alt="/channel">
+                    <h3>/channel</h3>
+                    <p>Nastaví kanál pro odesílání svátků</p>
+                </div>
+                <div class="command-card">
+                    <img src="prikazy_obrazky/modrole.webp" alt="/modrole">
+                    <h3>/modrole</h3>
+                    <p>Nastaví roli moderátora bota.</p>
+                </div>
+                <div class="command-card">
+                    <img src="prikazy_obrazky/sendSvatek.webp" alt="/sendSvatek">
+                    <h3>/sendSvatek</h3>
+                    <p>Pošle svátek do nastaveného kanálu.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="support">
+            <a href="https://discord.com/invite/52hnjet" class="btn" id="supportbtn">📩 Přidat se na support server</a>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>© 2025 eSvatek • Vytvořen s ❤️ pro Discord komunitu</p>
+    </footer>
+
+
+    <script>
+        const toggleBtn = document.getElementById('theme-toggle');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const savedTheme = localStorage.getItem('theme');
+
+
+        if (savedTheme) {
+            document.body.dataset.theme = savedTheme;
+        } else {
+            document.body.dataset.theme = prefersDark ? 'dark' : 'light';
+        }
+
+
+        toggleBtn.addEventListener('click', () => {
+            const current = document.body.dataset.theme;
+            const next = current === 'light' ? 'dark' : 'light';
+            document.body.dataset.theme = next;
+            localStorage.setItem('theme', next);
+            toggleBtn.textContent = next === 'light' ? '🌙' : '☀️';
+        });
+
+
+        toggleBtn.textContent = document.body.dataset.theme === 'light' ? '🌙' : '☀️';
+    </script>
+</body>
+
+</html>
