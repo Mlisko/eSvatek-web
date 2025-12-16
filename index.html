@@ -19,15 +19,12 @@
         <button id="theme-toggle" aria-label="Přepnout režim">🌙</button>
     </header>
 
-
     <main>
         <section class="hero">
             <h2>Discord bot, který ti připomene svátky</h2>
             <p>Automatické odesílání, jednoduchá konfigurace a moderní design.</p>
-            <a href="https://discord.com/oauth2/authorize?client_id=802294219720359948&permissions=412585806929&scope=bot%20applications.commands"
-                class="btn">📩 Přidat eSvatek na server</a>
+            <!--<a href="https://discord.com/oauth2/authorize?client_id=802294219720359948&permissions=412585806929&scope=bot%20applications.commands" class="btn">📩 Přidat eSvatek na server</a>-->
         </section>
-
 
         <section id="prikazy" class="commands">
             <h2>Uživatelské příkazy</h2>
@@ -62,13 +59,7 @@
                     <h3>/svatek</h3>
                     <p>Zjistí svátek k dnešnímu dni, nebo k zadanému datu.</p>
                 </div>
-                <div class="command-card">
-                    <img src="prikazy_obrazky/vote.webp" alt="/vote">
-                    <h3>/vote</h3>
-                    <p>Podpoř bota hlasováním na Top.gg.</p>
-                </div>
             </div>
-
 
             <h2>Moderátorské příkazy</h2>
             <div class="command-grid">
@@ -98,7 +89,7 @@
 
 
     <footer>
-        <p>© 2025 eSvatek • Vytvořen s ❤️ pro Discord komunitu</p>
+        <p>eSvatek • Vytvořen s ❤️ pro Discord komunitu</p>
     </footer>
 
 
@@ -114,7 +105,6 @@
             document.body.dataset.theme = prefersDark ? 'dark' : 'light';
         }
 
-
         toggleBtn.addEventListener('click', () => {
             const current = document.body.dataset.theme;
             const next = current === 'light' ? 'dark' : 'light';
@@ -122,7 +112,6 @@
             localStorage.setItem('theme', next);
             toggleBtn.textContent = next === 'light' ? '🌙' : '☀️';
         });
-
 
         toggleBtn.textContent = document.body.dataset.theme === 'light' ? '🌙' : '☀️';
     </script>

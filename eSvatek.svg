@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="100%" height="100%" viewBox="0 0 2134 2134" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
     <g id="Vrstva-1" serif:id="Vrstva 1" transform="matrix(4.16667,0,0,4.16667,0,0)">
-        <g transform="matrix(0.240829,0,0,0.24,-1.76815,0)">
+        <g transform="matrix(0.240829,0,0,0.24,-1.76815,1.09139e-13)">
             <path d="M2133.33,452.375L2133.33,1881.19C2133.33,2020.35 2020.74,2133.33 1882.06,2133.33L258.618,2133.33C119.935,2133.33 7.342,2020.35 7.342,1881.19L7.342,452.375L2133.33,452.375Z" style="fill:rgb(246,246,246);"/>
         </g>
         <g transform="matrix(1,0,0,1,289.393,183.83)">
@@ -32,8 +32,8 @@
         <g transform="matrix(1,0,0,1,410.796,374.785)">
             <path d="M0,66.182L-59.603,66.182C-68.94,66.182 -76.509,58.613 -76.509,49.276L-76.509,16.906C-76.509,7.569 -68.94,0 -59.603,0L0,0C9.337,0 16.906,7.569 16.906,16.906L16.906,49.276C16.906,58.613 9.337,66.182 0,66.182" style="fill:rgb(218,218,218);fill-rule:nonzero;"/>
         </g>
-        <g transform="matrix(0.24,0,0,0.240235,0,0)">
-            <use id="_Image1_" serif:id="_Image1" xlink:href="#_Image1" x="0" y="0" width="2134px" height="453px"/>
+        <g transform="matrix(0.24,-0,-0,0.24,0,0)">
+            <use xlink:href="#_Image1" x="0" y="0" width="2134px" height="453px"/>
         </g>
     </g>
     <defs>
