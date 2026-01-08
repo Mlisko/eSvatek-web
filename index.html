@@ -90,16 +90,17 @@
     <script>
         const toggleBtn = document.getElementById('theme-toggle');
         
+        // Funkce pouze mění vzhled, neukládá nic do localStorage
         const setTheme = (theme) => {
             document.body.dataset.theme = theme;
             toggleBtn.textContent = theme === 'light' ? '🌙' : '☀️';
-            localStorage.setItem('theme', theme);
         };
 
-        const savedTheme = localStorage.getItem('theme') || 
-            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-
-        setTheme(savedTheme);
+        // Zjistíme preferenci systému (tmavý/světlý režim Windows/macOS/Mobilu)
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        // Nastavíme výchozí téma podle systému
+        setTheme(systemPrefersDark ? 'dark' : 'light');
 
         toggleBtn.addEventListener('click', () => {
             const current = document.body.dataset.theme;
