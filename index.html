@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="cs">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eSvatek</title>
+    <title>eSvatek | Discord Bot</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="icon" href="eSvatek.svg">
 </head>
-
 <body>
     <header class="navbar">
         <div class="logo">
@@ -22,12 +20,15 @@
     <main>
         <section class="hero">
             <h2>Discord bot, který ti připomene svátky</h2>
-            <p>Automatické odesílání, jednoduchá konfigurace a moderní design.</p>
-            <a href="https://discord.com/oauth2/authorize?client_id=802294219720359948&permissions=412585806929&scope=bot%20applications.commands" class="btn" target="_blank">📩 Přidat eSvatek na server</a>
+            <p>Automatické odesílání, jednoduchá konfigurace a moderní design pro tvůj server.</p>
+            <div class="btn-group">
+                <a href="https://discord.com/oauth2/authorize?client_id=802294219720359948&permissions=412585806929&scope=bot%20applications.commands" class="btn" target="_blank">📩 Přidat eSvatek na server</a>
+                <a href="https://discord.com/invite/52hnjet" class="btn" target="_blank">📲 Support server</a>
+            </div>
         </section>
 
         <section id="prikazy" class="commands">
-            <h2>Uživatelské příkazy</h2>
+            <h2 style="margin-top: 0;">Uživatelské příkazy</h2>
             <div class="command-grid">
                 <div class="command-card">
                     <img src="prikazy_obrazky/bot.webp" alt="/bot">
@@ -61,12 +62,12 @@
                 </div>
             </div>
 
-            <h2>Moderátorské příkazy</h2>
+            <h2 style="margin-top: 5rem;">Moderátorské příkazy</h2>
             <div class="command-grid">
                 <div class="command-card">
                     <img src="prikazy_obrazky/channel.webp" alt="/channel">
                     <h3>/channel</h3>
-                    <p>Nastaví kanál pro odesílání svátků</p>
+                    <p>Nastaví kanál pro odesílání svátků.</p>
                 </div>
                 <div class="command-card">
                     <img src="prikazy_obrazky/modrole.webp" alt="/modrole">
@@ -80,41 +81,30 @@
                 </div>
             </div>
         </section>
-
-        <section class="support">
-            <a href="https://discord.com/invite/52hnjet" class="btn" id="supportbtn" target="_blank">📲 Přidat se na support server</a>
-        </section>
-        
     </main>
-
 
     <footer>
         <p>eSvatek • Vytvořen s ❤️ pro Discord komunitu</p>
     </footer>
 
-
     <script>
         const toggleBtn = document.getElementById('theme-toggle');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const savedTheme = localStorage.getItem('theme');
+        
+        const setTheme = (theme) => {
+            document.body.dataset.theme = theme;
+            toggleBtn.textContent = theme === 'light' ? '🌙' : '☀️';
+            localStorage.setItem('theme', theme);
+        };
 
+        const savedTheme = localStorage.getItem('theme') || 
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 
-        if (savedTheme) {
-            document.body.dataset.theme = savedTheme;
-        } else {
-            document.body.dataset.theme = prefersDark ? 'dark' : 'light';
-        }
+        setTheme(savedTheme);
 
         toggleBtn.addEventListener('click', () => {
             const current = document.body.dataset.theme;
-            const next = current === 'light' ? 'dark' : 'light';
-            document.body.dataset.theme = next;
-            localStorage.setItem('theme', next);
-            toggleBtn.textContent = next === 'light' ? '🌙' : '☀️';
+            setTheme(current === 'light' ? 'dark' : 'light');
         });
-
-        toggleBtn.textContent = document.body.dataset.theme === 'light' ? '🌙' : '☀️';
     </script>
 </body>
-
 </html>
