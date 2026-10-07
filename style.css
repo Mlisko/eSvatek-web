@@ -277,6 +277,19 @@ code, .code-tag {
   white-space: nowrap;
 }
 
+.flag-pair {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.flag-sm {
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  display: block;
+}
+
 .hl-dot {
   color: var(--text-dim);
 }
@@ -342,8 +355,19 @@ code, .code-tag {
 }
 
 .card-icon-bubble {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-size: 1.8rem;
   margin-bottom: 12px;
+}
+
+.flag-bubble-img {
+  width: 26px;
+  height: 26px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  display: block;
 }
 
 .bento-card h3 {
@@ -386,7 +410,7 @@ code, .code-tag {
   background: rgba(255, 0, 0, 0.08);
 }
 
-/* Setting Flow Steps */
+/* Setting Flow Steps - Uniform without red highlight on test */
 .setting-flow {
   display: flex;
   align-items: center;
@@ -403,12 +427,6 @@ code, .code-tag {
   border-radius: var(--radius-sm);
   color: var(--text-main);
   white-space: nowrap;
-}
-
-.flow-step.test-step {
-  border-color: rgba(255, 30, 40, 0.35);
-  color: #ff5555;
-  background: rgba(255, 0, 0, 0.08);
 }
 
 .flow-arrow {
